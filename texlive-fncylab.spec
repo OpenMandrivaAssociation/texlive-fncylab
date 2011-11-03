@@ -1,3 +1,9 @@
+# revision 17382
+# category Package
+# catalog-ctan /macros/latex/contrib/fncylab
+# catalog-date 2010-03-09 12:54:42 +0100
+# catalog-license lppl
+# catalog-version 1.0
 Name:		texlive-fncylab
 Version:	1.0
 Release:	1
@@ -44,6 +50,7 @@ labels at the start of a sentence.
 %doc %{_texmfdistdir}/doc/latex/fncylab/fncylab-example.tex
 %doc %{_texmfdistdir}/doc/latex/fncylab/fncylab.pdf
 %doc %{_texmfdistdir}/doc/latex/fncylab/fncylab.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ labels at the start of a sentence.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
