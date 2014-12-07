@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-fncylab
 Version:	1.0
-Release:	8
+Release:	9
 Summary:	Alter the format of \label references
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fncylab
