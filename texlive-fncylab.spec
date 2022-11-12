@@ -1,18 +1,12 @@
-# revision 17382
-# category Package
-# catalog-ctan /macros/latex/contrib/fncylab
-# catalog-date 2010-03-09 12:54:42 +0100
-# catalog-license lppl
-# catalog-version 1.0
 Name:		texlive-fncylab
-Version:	1.0
-Release:	12
+Version:	52090
+Release:	1
 Summary:	Alter the format of \label references
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fncylab
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fncylab.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fncylab.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fncylab.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fncylab.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,40 +22,24 @@ provides a \Ref command to make reference to such redefined
 labels at the start of a sentence.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/fncylab/fncylab.sty
-%doc %{_texmfdistdir}/doc/latex/fncylab/fncylab-example.tex
-%doc %{_texmfdistdir}/doc/latex/fncylab/fncylab.pdf
-%doc %{_texmfdistdir}/doc/latex/fncylab/fncylab.tex
+%{_texmfdistdir}/tex/latex/fncylab
+%doc %{_texmfdistdir}/doc/latex/fncylab
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 752002
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 718472
-- texlive-fncylab
-- texlive-fncylab
-- texlive-fncylab
-- texlive-fncylab
-
