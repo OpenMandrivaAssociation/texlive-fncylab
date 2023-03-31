@@ -1,6 +1,6 @@
 Name:		texlive-fncylab
 Version:	52090
-Release:	1
+Release:	2
 Summary:	Alter the format of \label references
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fncylab
