@@ -3,7 +3,7 @@ Version:	52090
 Release:	2
 Summary:	Alter the format of \label references
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/fncylab
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/fncylab
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fncylab.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/fncylab.doc.r%{version}.tar.xz
